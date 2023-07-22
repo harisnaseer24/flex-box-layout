@@ -15,12 +15,16 @@
     
 </head>
 <body>
-    <header>
+    <header id="head">
         <div class="logo">
             <h1>Hippo <span style="color:brown;">&</span> Crate</h1>
-            
+             <div id="toggleBtn">
+               
+            <i class="fa-solid fa-bars" style="color:brown;" onclick="toggle();"></i>
         </div>
-        <nav class="navbar">
+        </div>
+       
+        <nav id="respNav" class="navbar navitems">
             
 <div class="navitem navitem-1"><a href="#"> Brush Plans</a></div>
 <div class="navitem navitem-2"><a href="#"> About</a></div>
@@ -59,14 +63,14 @@
         </div>
         </section>
         <section id="nextsec">
-            <div>
+           
             <img src="./images/3.jpg" alt="">
          <div class="textupper">
             <h1>Why we Are Different?</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi alias quod dolor illo, eligendi cupiditate omnis debitis dicta iusto reiciendis, repellat similique praesentium maxime odit libero pariatur, reprehenderit ea? Saepe.</p>
             <i class="fa-solid fa-angle-down"></i>
          </div>
-</div>
+
         </section>
         <section id="last">
 
@@ -84,5 +88,25 @@
             </div>
         </section>
     </main>
+    <script>
+        function toggle(){
+            let nav=document.getElementById("respNav");
+           let status=nav.style.display
+       
+           if(status=="none"){
+
+        nav.style.display="flex";
+        nav.style.flexDirection="column";
+        nav.style.alignItems="center";
+        nav.style.padding="10px";
+        nav.style.margin="0px";
+        
+        nav.style.height="100%";}
+        else{
+            nav.style.display="none";
+        }
+
+        }
+    </script>
 </body>
 </html>
